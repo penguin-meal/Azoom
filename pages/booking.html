@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Booking</title>
+</head>
+
+<body onload="loadDisplayInfo()">
+    <header>
+        <nav>
+            <a class="logo-ref" href=index.html><img class="logo" src="../icons/azoom-logo.svg" alt="logo"></a>
+        
+            <div class="header-div">
+                <ul class="header-nav">
+                    <li><a href="our-fleet.html">Our Fleet</a></li>
+                    <li><a href="how-it-works.html">How it works</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+
+                <div class="user-div">
+                    <img src="../icons/profile-circle.svg" alt="profile">
+                    <p class="user-name">user1234</p>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- content here -->
+    <div class="content">
+    <div class="search-result-div">
+        <div class="search-result">
+            <div>
+                <h3 class="header-3">Pick Up:</h3>
+                <div class="readonly">
+                    <div class="bold" id="display-pickup-loc"></div>
+                    <div>&nbsp;,&nbsp;</div>
+                    <div class="bold" id="display-pickup-date"></div>
+                    <div>&nbsp; to&nbsp;</div>
+                    <div class="bold" id="display-return-date"></div>
+                </div>
+            </div>
+            <img src="../icons/edit.svg" onclick="enableEdit()">
+        </div>
+    </div>
+
+    <!-- search drop down (popup) -->
+    <div class="search-bar-alignment" id="searchBarAlignment">
+        <form class="search-bar">
+            <div class="search-field">
+                <label>Pick Up Location</label>
+                <select class="pickup-location" id="pickup-loc" required>
+                    <option value="" disabled selected>Choose your location</option>
+                    <option value="Kaki Bukit">Kaki Bukit</option>
+                    <option value="Tampines">Tampines</option>
+                </select>
+            </div>
+
+            <div class="search-field">
+                <label>Pickup Date</label>
+                <input class="date-picker" type="date" id="pickup-date" required>
+            </div>
+
+            <div class="search-field">
+                <label>Return Date</label>
+                <input class="date-picker" type="date" id="return-date" required>
+            </div>
+
+            <input class="search-btn" type="button" value="Search" onclick="submitSearch()">
+        </form>
+    </div>
+
+    <!-- cars option cards-->
+    <div class="selection-section" id="selection-section">
+        
+    <!-- content is generated in javascript-->
+    </div>
+
+    </div>
+    <!-- Content ends here -->
+    <footer>
+        <p class="footer-copyright">© 2024 AZoom Car Rental Pte Ltd</p>
+
+        <nav>
+        <div class="footer-div">
+            <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                <li class="seperator">|</li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li class="seperator">|</li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li class="seperator">|</li>
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                <li class="seperator">|</li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="sm-icons">
+            <img class="social-icons" src="../icons/facebook.svg" alt="facebook">
+            <img class="social-icons" src="../icons/instagram.svg" alt="instagram">
+            <img class="social-icons" src="../icons/tiktok.svg" alt="tiktok">
+        </div>
+        </nav>
+    </footer>
+    </div> <!-- closes register pop up-->
+
+    <!-- register success pop up-->
+    <div id="final-step" class="popup">
+        <div class="popup-content">
+        <!-- header + close button -->
+        <div class="popup-header">
+            <h1 class="popup-title">One final step...</h1>
+            <span id="closeFinalStep" class="close">&times;</span>  
+        </div>
+        <p>Welcome to the AZoom family! <br><br>To kick start your journey with us, kindly upload your driving license in your profile.</p>
+        <button class="form-pri-btn" >Edit My Profile</button>
+    </div>
+
+    </div> <!-- closes main-div-->
+
+    
+
+    <script src="../scripts/booking.js" defer></script>
+</body>
+</html>

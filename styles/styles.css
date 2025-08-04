@@ -1,0 +1,1012 @@
+/* Basic layout formatting styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(234,234,234);
+    height: 100%;
+    
+    display: grid;
+    place-items: center;
+}
+
+.content {
+    flex: 1;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+    width: 60%;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(51,51,51);
+    justify-content: center;
+    display: flex;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.logo {
+    width: 10rem;
+    margin-bottom: 1rem;
+}
+
+.logo-ref:hover {
+    border-bottom: none;
+}
+
+.header-nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5rem;
+}
+
+.login-nav li {
+    padding-left: 0;
+}
+
+header nav ul {
+    padding: 0;
+}
+
+header nav ul li {
+    padding-left: 2rem;
+}
+
+.header-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seperator {
+    display: inline;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: rgb(232, 232, 232);
+}
+
+a {
+    color: rgb(232, 232, 232);
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    border-bottom: 2px transparent;
+    transition: border-bottom-color 0.4s ease, width 0.4s ease;
+}
+
+a:hover {
+    border-bottom: 2px solid;
+}
+
+footer {
+    font-size: 14px;
+    background-color: rgb(51,51,51);
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    padding-left: 20%;
+    padding-right: 20%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.footer-div ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.footer-copyright {
+    display: inline;
+    color: rgb(232, 232, 232);
+    width: 20rem;
+}
+
+.social-icons {
+    padding-left: 1rem;
+}
+
+.social-icons:hover {
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the left */
+    }}
+
+
+/*Styles for content*/
+
+.button-div {
+    display: flex;
+    justify-content: space-between;
+    width: 16rem;
+    margin-top: 2rem;
+}
+
+button {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: auto;
+
+    align-self: center;
+}
+
+.primary-btn {
+    background-color: rgb(21,148,148);
+    color: white;
+    font-weight: bold;
+}
+
+.primary-btn:hover {
+    background-color: rgb(18, 122, 122);
+}
+
+.primary-btn:active {
+    outline: 3px solid rgb(232, 232, 232);
+    outline-offset: 0;
+}
+
+.secondary-btn {
+    background-color: rgb(232, 232, 232);
+    color: rgb(28,28,28);
+}
+
+.secondary-btn:active {
+    outline: 3px solid rgb(28,28,28);
+    outline-offset: 0;
+}
+
+.search-btn {
+    background-color: rgb(21,148,148);
+    color: rgb(244,244,244);
+    font-weight: bold;
+    border: none;
+    width: auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: 2.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+    background-color: rgb(20, 135, 135);
+}
+
+.search-btn:active {
+    background-color: rgb(18, 122, 122);
+    color: black;
+}
+
+.text-brand-green {
+    color: rgb(18, 122, 122);
+}
+
+.steps-title {
+    font-weight: normal;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.steps-header {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.h2-bold {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.fleet-p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icon-container {
+    display: flex;
+    width: 84px;
+    height: 60px;
+    justify-content: center; /* aligns items horizontally */
+    align-items: center; /*aligns items vertically*/
+}
+
+.icon-container img {
+    height: 52px;
+}
+
+.card p {
+    margin: 0;
+    padding: 0;
+}
+
+.money-val {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-pax {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start;
+    margin-top: 1rem;
+}
+
+.user-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.user-pax {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0.2rem;
+    padding: 0;
+}
+
+input {
+    margin-bottom: 0.2rem;
+    width: 100%;
+    background-color: rgb(244,244,244);
+    border-color: rgb(184,184,184);
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+
+input::placeholder {
+    color: rgb(207, 207, 207);
+}
+
+.form-pri-btn {
+    color: rgb(244,244,244);
+    background-color: rgb(21,148,148);
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    border-radius: 0.5rem;
+
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.form-pri-btn:hover {
+    background-color: rgb(18, 122, 122);
+}
+
+.form-pri-btn:active {
+    outline: 3px solid rgb(28,28,28);
+    outline-offset: 0;
+}
+
+.form-seperator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.form-seperator hr {
+    flex: 1;
+    border: 0;
+    height: 0.1px;
+    background-color:rgb(207, 207, 207);
+}
+
+.form-sep-text {
+    color: rgb(184,184,184);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.form-sec-btn {
+    color : rgb(28,28,28);
+    background-color: white;
+    border: 1px solid rgb(28,28,28);
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.form-sec-btn:hover {
+    background-color: rgb(232, 232, 232);
+    color: rgb(28,28,28);
+}
+
+.form-sec-btn:active {
+    outline: 3px solid rgb(28,28,28);
+    outline-offset: 0;
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.pw-div {
+    position: relative;
+}
+
+.pw-div input {
+    width: 100%;
+}
+
+.date-picker {
+    width: 100%;
+    height: 60%;
+    background-color: rgb(244,244,244);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
+}
+
+.pickup-location {
+    height: auto;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid rgb(184,184,184);
+    border-radius: 0.5rem;
+}
+
+select {
+    height: 100px;
+}
+
+.readonly {
+    color: rgb(28,28,28);
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.editable {
+    cursor: text;
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgb(184,184,184);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    height: 100%
+}
+
+.search-bar-alignment {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.search-bar {
+    background-color: rgb(244,244,244);
+    border: 1px solid rgb(184,184,184);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 1.25rem;
+}
+
+.search-field:first-child {
+    border: none;
+}
+
+.search-field label {
+    font-weight: bold;
+}
+
+.search-result-div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.search-result {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.header-3 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding-bottom: 0rem;
+}
+
+.search-result img:hover {
+    cursor: pointer;
+}
+
+.search-result h2 {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+}
+
+.selection {
+    border: 1px solid rgb(199, 199, 199);
+    background-color: rgb(241,241,241);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    max-width: 30%;
+
+    margin-bottom: 4rem;
+}
+
+.selection:hover {
+    outline: 2px solid rgb(148, 148, 148);
+}
+
+.selection:active {
+    outline: 2px solid rgb(21,148,148);
+}
+
+.selection-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.selection-section h3{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.25rem;
+}
+
+.selection-section p{
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+.selection-section p.car-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.selection-section p.car-total-price {
+    color: rgb(148, 148, 148);
+    display: flex;
+    justify-content: center;
+}
+
+.price-per-day {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.car-img{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.title-div {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.caution-div {
+    display: flex;
+    margin-top: 0.75rem;
+}
+
+.caution-div p {
+    margin-left: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.header-4 {
+    font-size: 1.25rem;
+}
+
+.header-group {
+    display: flex;
+    align-items: center;
+}
+
+.header-group img{
+    margin-right: 1rem;
+}
+
+.header-group img:hover {
+    cursor: pointer; 
+}
+
+.title-div p {
+    margin-bottom: 0;
+}
+
+.check-line {
+    display: flex;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0.25rem;
+    align-items: flex-start;
+}
+
+.check-line p {
+    margin: 0;
+    padding-left: 0.5rem;
+}
+
+.check-line img {
+    padding-top: 0.15rem;
+}
+
+/* not used */
+.cdw-card {
+    border: 1px solid rgb(199, 199, 199);
+    background-color: rgb(241,241,241);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.cdw-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.cdw-bold {
+    font-weight: bold;
+}
+
+.selection-card {
+    border: 1px solid rgb(199, 199, 199);
+    background-color: rgb(241,241,241);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 32%;
+    justify-content: space-between;
+}
+
+/* for selection-card active */
+.active {
+    outline: 2px solid rgb(21,148,148);
+}
+
+.selection-card.active:hover {
+    outline: 2px solid rgb(21,148,148);
+}
+
+.selection-card:hover {
+    outline: 2px solid rgb(148, 148, 148);
+}
+
+.selection-card:active {
+    outline: 2px solid rgb(21,148,148);
+}
+
+
+
+.cdw-price {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.cdw-price p{
+    font-weight: bold;
+    display: inline;
+    font-size: 1.5rem;
+}
+
+.total-price-popup {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20%;
+    padding-left: 20%;
+    box-sizing: border-box;
+    bottom: 0;
+}
+
+.total-price-div {
+    margin-right: 5rem;
+    display: flex;
+    flex-direction:column ;
+}
+
+.total-price {
+    display: flex;
+    align-items: end;
+}
+
+.total {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.price {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 0;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.price-details {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.25rem;
+    margin-bottom: 1.25rem;
+    text-decoration: underline;
+}
+
+.price-details:hover {
+    cursor: pointer;
+}
+
+.cdw-btn {
+    background-color: rgb(21,148,148);
+
+}
+
+/* for popup */
+.popup {
+    display: none; /* none by default , use block to show*/
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    overflow: auto;
+}
+
+.popup-content {
+    background-color: white;
+    margin: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border: 1px solid #888;
+    width: 20%; 
+    max-height: 80%;
+    overflow-y: scroll;
+    text-align: left;
+    border-radius: 1.25rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 0;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-title {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.popup p {
+    margin: 0;
+}
+
+.close {
+    color: rgb(28,28,28);
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+
+.popup .pd-title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    display: flex;
+}
+
+.price-details-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.price-details-line-name {
+    display: flex;
+}
+
+.pd-bold {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* add this style to disables scorlling for popup with js */
+.no-scroll {
+    overflow: hidden;
+}
+
+/* mainly for add ons */
+.add-on-options {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.option {
+    display: flex;
+    border: 1px solid rgb(199,199,199);
+    border-radius: 1rem;
+    width: 100%;
+    padding: 1.25rem 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.add-on-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.option:hover {
+    outline: 2px solid rgb(148, 148, 148);
+}
+
+.option:active {
+    outline: 2px solid rgb(21,148,148);
+}
+
+.add-on-options p {
+    margin: 0;
+    margin-left: 0;
+}
+
+.option-line {
+    display: flex;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    align-items: flex-end;
+}
+
+.option-line p{
+    margin-left: 0.5rem;
+}
+
+.add-on-desc {
+    width: 30%;
+}
+
+.add-on-desc p{
+    margin: 0;
+}
+
+.return-loc {
+    background-color: red;
+    width: 100px;
+    height:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOR TOGGLE BUTTON */
+.toggle-btn {
+    padding: 0;
+    margin: 0;
+
+    background-color:rgb(148, 148, 148);
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+.toggle-btn::before {
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    margin: 0.25rem;
+
+    transition:0.2s;
+}
+
+input:checked + .toggle-btn {
+    background-color: rgb(21,148,148);
+}
+
+input:checked + .toggle-btn::before {
+    transform: translateX(1.5rem);
+}
+
+.hide-icon {
+    display: none;
+}
+
+.toggle-div {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option-loc {
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.return-loc-text {
+    margin-right: 1rem;
+    width: 70%;
+    align-items: flex;
+}
+
+.return-loc-text:disabled {
+    background-color: rgb(199, 199, 199);
+}
+
+#add-driver-line {
+    display: none;
+}
+
+#insurance-line {
+    display: none;
+}
+
+#childSeatLine {
+    display: none;
+}
+
+#returnLocLine {
+    display: none;
+}
+
+.add-on-desc .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.book-now-space {
+    display: flex;
+    justify-content: center;
+}
+
+.success-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.user-div {
+    display: flex;
+    margin-left: 3rem;
+    
+}
+
+.user-name {
+    color: rgb(232,232,232);
+    margin-left: 0.5rem;
+}

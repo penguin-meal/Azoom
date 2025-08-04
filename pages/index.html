@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>Welcome to AZoom</title>
+</head>
+
+<body>
+    <div class="main-div">
+    <div class="overlay">
+        
+    <header>
+        <nav>
+
+            <img class="logo" src="../icons/azoom-logo.svg" alt="logo">
+        
+            <div class="header-div" id="header-div"><ul class="header-nav">
+                <li><a href="our-fleet.html">Our Fleet</a></li>
+                <li><a href="how-it-works.html">How it works</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+
+            <ul class="login-nav" id="login-nav">
+                <li><a href="#" id="login-btn">Log In</a></li>
+                <li class="seperator">|</li>
+                <li><a href="#" id="register-btn">Register</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+<!-- search drop down (popup) -->
+<div class="search-bar-alignment" id="searchBarAlignment">
+    <form class="search-bar">
+        <div class="search-field">
+            <label>Pick Up Location</label>
+            <select class="pickup-location" id="pickup-loc" required>
+                <option value="" disabled selected>Choose your location</option>
+                <option value="Kaki Bukit">Kaki Bukit</option>
+                <option value="Tampines">Tampines</option>
+            </select>
+        </div>
+
+        <div class="search-field">
+            <label>Pickup Date</label>
+            <input class="date-picker" type="date" id="pickup-date" required>
+        </div>
+
+        <div class="search-field">
+            <label>Return Date</label>
+            <input class="date-picker" type="date" id="return-date" required>
+        </div>
+
+        <input class="search-btn" type="button" value="Search" onclick="submitSearch()">
+    </form>
+</div>
+
+
+
+
+
+    <div class="content">
+        <h1>EXPERIENCE </br>ELECTRIC VEHICLES WITH US</h1>
+        
+        <p>We bring you the future of transportation with our range of electric vehicles, designed for efficiency, sustainability, and style. Whether you're looking for an eco-friendly ride or a high-performance experience, we've got you covered. </p>
+        <div class="button-div">
+            <button class="primary-btn">Rent Now</button>
+            <button class="secondary-btn">Learn More</button>
+        </div>
+    </div> <!-- closes content-->
+    </div> <!-- div closing for overlay-->
+
+        <img class="banner-img" src="../images/home-banner.jpg" alt="banner">
+    
+    
+    <div class="steps-div">
+        <p class="steps-title">How it Works</p>
+        <h2 class="steps-header">Rent your car with <span class="text-brand-green">3</span> simple steps</h2>
+        <div class="cards-div">
+            <div class="card-steps">
+                <div class="icon-container"><img src="../icons/booking-icon.svg" alt="make-a-booking"></div>
+                <h4>Make a Booking</h4>
+                <p>Choose your pick-up date and car type that suits your driving needs</p>
+            </div>
+
+            <div class="card-steps">
+                <div class="icon-container"><img src="../icons/key-icon.svg" alt="pick-up"></div>
+                <h4>Pick Up</h4>
+                <p>Pick up at our office on the day of rental</p>
+            </div>
+
+            <div class="card-steps">
+                <div class="icon-container"><img src="../icons/car-icon.svg" alt="drive"></div>
+                <h4>Drive</h4>
+                <p>Start enjoying the benefits of an electric car</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fleet-div">
+        <h2 class="h2-bold">Our Fleet</h2>
+        <h2 class="h2-bold">Go Green, Go Electric - Azoom into the future!</h2>
+        <p class="fleet-p">Driving a cleaner, greener future by making electric vehicle rentals accessible, affordable, and enjoyable for everyone, everywhere.</p>
+
+        <div class="cards-div">
+            <div class="card-fleet">
+                <p class="fleet-card-header">Tesla Model X</p>
+                <img src="../images/tesla-model-x.png" alt="car-1">
+                <div class="card-desc">
+                    <div class="card-pax">
+                        <img class="user-icon" src="../icons/user.svg" alt="pax">
+                        <p class="user-pax">5</p>
+                    </div>
+                    <p class="user-pax">from <span class="money-val">$350</span>/week</p>
+                </div>
+            </div>
+
+            <div class="card-fleet">
+                <p class="fleet-card-header">Hyundai Tuscan</p>
+                <img src="../images/hyundai-tuscan.png" alt="car-2">
+                <div class="card-desc">
+                    <div class="card-pax">
+                        <img class="user-icon" src="../icons/user.svg" alt="pax">
+                        <p class="user-pax">5</p>
+                    </div>
+                    <p class="user-pax">from <span class="money-val">$300</span>/week</p>
+                </div>
+            </div>
+
+            <div class="card-fleet">
+                <p class="fleet-card-header">Audi A3</p>
+                <img src="../images/audi-a3.png" alt="car-3">
+                <div class="card-desc">
+                    <div class="card-pax">
+                        <img class="user-icon" src="../icons/user.svg" alt="pax">
+                        <p class="user-pax">5</p>
+                    </div>
+                    <p class="user-pax">from <span class="money-val">$400</span>/week</p>
+                </div>
+            </div>
+
+        </div> <!-- closing card-div -->
+
+        <button class="primary-btn">View More</button>
+    </div> <!-- closing fleet-div -->
+
+    <footer>
+        <p class="footer-copyright">© 2024 AZoom Car Rental Pte Ltd</p>
+
+        <nav>
+        <div class="footer-div">
+            <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                <li class="seperator">|</li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li class="seperator">|</li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li class="seperator">|</li>
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                <li class="seperator">|</li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="sm-icons">
+            <img class="social-icons" src="../icons/facebook.svg" alt="facebook">
+            <img class="social-icons" src="../icons/instagram.svg" alt="instagram">
+            <img class="social-icons" src="../icons/tiktok.svg" alt="tiktok">
+        </div>
+        </nav>
+    </footer>
+
+
+    <!-- pop up for log in-->
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <!-- close button -->
+            <div class="popup-header">
+                <h1 class="popup-title">Log In</h1>
+                <span id="closeLogin" class="close">&times;</span>  
+            </div>
+          
+            <p class="form-title">Email address</p>
+            <input type="text" id="login-email" placeholder="Enter your email address">
+            <span class="error" id="login-email-error"></span>
+
+            <p class="form-title">Password</p>
+            <input type="text" id="login-password" placeholder="Enter your password">
+            <span class="error" id="login-password-error"></span>
+
+            <button id="login-pri-btn" class="form-pri-btn" onclick="chkLogin()">
+                Log In
+            </button>
+
+            <div class="form-seperator">
+                <hr><p class="form-sep-text">Or</p><hr>
+            </div>
+
+            <button id="login-sec-btn" class="form-sec-btn">Register an account</button>
+        </div>
+    </div>
+
+    <!-- pop up for register -->
+    <div id="register-popup" class="popup">
+        <div class="popup-content">
+            <!-- close button -->
+            <div class="popup-header">
+                <h1 class="popup-title">Get Started Now</h1>
+                <span id="closeRegister" class="close">&times;</span>  
+            </div>
+
+            <form method="get" onsubmit="return chkValidation(event)">
+                <p class="form-title">First Name</p>
+                <input type="text" id="fName" placeholder="Enter your first name">
+                <span class="error" id="fNameError"></span>
+
+                <p class="form-title">Last Name</p>
+                <input type="text" id="lName" placeholder="Enter your last name">
+                <span class="error" id="lNameError"></span>
+            
+                <p class="form-title">Email address</p>
+                <input type="text" id="reg-email" placeholder="Enter your email address">
+                <span class="error" id="reg-emailError"></span>
+                
+                
+                <p class="form-title">Password</p>
+                <div class="pw-div">
+                    <input type="password" id="reg-password" placeholder="Enter your password">
+                    <span class="toggle-pw">
+                        <img id ="eye-icon" src="../icons/eye-close.svg">
+                    </span>
+                </div>
+                <span class="error" id="reg-passwordError"></span>
+                
+
+                <p class="form-title">Confirm Password</p>
+                <div class="pw-div">
+                <input type="password" id="reg-password2" placeholder="Enter your password again">
+                    <span class="toggle-pw">
+                        <img id ="eye-icon2" src="../icons/eye-close.svg">
+                    </span>
+                </div>
+                <span class="error" id="reg-password2Error"></span>
+
+                <label class="agreement">
+                    <input type="checkbox" id="agreement" name="agreement" class="agreement-checkbox">
+                    <span>
+                        By continuing I understand and agree to AZoom Car Rental’s <a class="link" href="terms-of-use.html" target="_blank">Terms of Use</a> and 
+                        <a class="link" href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+                    </span>
+                </label>
+                <span class="error" id="agreement-checkbox-error"></span>
+                
+                <input type="submit" class="form-pri-btn" value="Register">
+
+                <div class="form-seperator">
+                    <hr><p class="form-sep-text">Or</p><hr>
+                </div>
+    
+                <button id="register-sec-btn" class="form-sec-btn" >Log In</button>
+                
+            </form>
+        </div>
+    </div> <!-- closes register pop up-->
+
+    <!-- register success pop up-->
+    <div id="final-step" class="popup">
+        <div class="popup-content">
+        <!-- header + close button -->
+        <div class="popup-header">
+            <h1 class="popup-title">One final step...</h1>
+            <span id="closeFinalStep" class="close">&times;</span>  
+        </div>
+        <p>Welcome to the AZoom family! <br><br>To kick start your journey with us, kindly upload your driving license in your profile.</p>
+        <button class="form-pri-btn" >Edit My Profile</button>
+    </div>
+    </div>
+
+
+    </div> <!-- closes main-div-->
+
+    
+
+    <script src="../scripts/main.js" defer></script>
+</body>
+</html>

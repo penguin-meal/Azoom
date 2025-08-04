@@ -1,0 +1,621 @@
+/* Basic layout formatting styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(232, 232, 232);
+    
+    display: grid;
+    place-items: center;
+}
+
+.banner-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.main-div {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+.overlay {
+    position: absolute; /* Overlay will be positioned absolutely inside its container */
+    top: 1rem;
+    left: 10rem;
+    right: 10rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    width: 10rem;
+    margin-bottom: 1rem;
+}
+
+.header-nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5rem;
+}
+
+.login-nav li {
+    padding-left: 0;
+}
+
+header nav ul {
+    padding: 0;
+}
+
+header nav ul li {
+    padding-left: 2rem;
+}
+
+.header-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seperator {
+    display: inline;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: rgb(232, 232, 232);
+}
+
+a {
+    color: rgb(232, 232, 232);
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    border-bottom: 2px transparent;
+    transition: border-bottom-color 0.4s ease, width 0.4s ease;
+}
+
+a:hover {
+    border-bottom: 2px solid;
+}
+
+footer {
+    font-size: 14px;
+    background-color: rgb(51,51,51);
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    padding-left: 20%;
+    padding-right: 20%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.footer-div ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.footer-copyright {
+    display: inline;
+    color: rgb(232, 232, 232);
+    width: 20rem;
+}
+
+.social-icons {
+    padding-left: 1rem;
+}
+
+.steps-div {
+    text-align: center;
+    width: 100%;
+}
+
+.cards-div {
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.card-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin: 0 4rem;
+}
+
+.cards-fleet-div {
+    padding-left: 16rem;
+    padding-right: 16rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9vh;
+}
+
+.fleet-div {
+    background-color: rgb(179, 218, 218);
+    width: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    text-align: center;
+}
+
+.card-fleet {
+    background-color: rgb(232, 232, 232);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.card-desc {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+}
+
+.card-pax {
+    display: flex;
+}
+
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the left */
+    }}
+
+
+/*Styles for content*/
+.content {
+    color: rgb(232, 232, 232);
+    width: 50%;
+    margin-top: 10%;
+}
+
+.button-div {
+    display: flex;
+    justify-content: space-between;
+    width: 16rem;
+    margin-top: 2rem;
+}
+
+button {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.primary-btn {
+    background-color: rgb(21,148,148);
+    color: white;
+    font-weight: bold;
+}
+
+.primary-btn:hover {
+    background-color: rgb(18, 122, 122);
+}
+
+.primary-btn:active {
+    outline: 3px solid rgb(232, 232, 232);
+    outline-offset: 0;
+}
+
+.secondary-btn {
+    background-color: rgb(232, 232, 232);
+    color: rgb(28,28,28);
+}
+
+.secondary-btn:active {
+    outline: 3px solid rgb(28,28,28);
+    outline-offset: 0;
+}
+
+.search-btn {
+    background-color: rgb(21,148,148);
+    color: rgb(244,244,244);
+    font-weight: bold;
+    border: none;
+    width: auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: 2.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+    background-color: rgb(20, 135, 135);
+}
+
+.search-btn:active {
+    background-color: rgb(18, 122, 122);
+    color: black;
+}
+
+.text-brand-green {
+    color: rgb(18, 122, 122);
+}
+
+.steps-title {
+    font-weight: normal;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.steps-header {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.h2-bold {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.fleet-p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icon-container {
+    display: flex;
+    width: 84px;
+    height: 60px;
+    justify-content: center; /* aligns items horizontally */
+    align-items: center; /*aligns items vertically*/
+}
+
+.icon-container img {
+    height: 52px;
+}
+
+.card p {
+    margin: 0;
+    padding: 0;
+}
+
+.money-val {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-pax {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+
+.user-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.user-pax {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0.2rem;
+    padding: 0;
+}
+
+.card-desc {
+    display: flex;
+    align-items: flex-end;
+}
+
+.fleet-card-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4.5rem;
+    margin-top: 0;
+}
+
+/* pop up (login / register) */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    overflow: auto;
+}
+
+.popup-content {
+    background-color: white;
+    margin: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border: 1px solid #888;
+    width: 20%; 
+    max-height: 80%;
+    overflow-y: scroll;
+    text-align: left;
+    border-radius: 1.25rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 0;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-title {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1rem;
+}
+
+.close {
+    color: rgb(28,28,28);
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+
+.form-title {
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+input {
+    margin-bottom: 0.2rem;
+    width: 100%;
+    background-color: rgb(244,244,244);
+    border-color: rgb(184,184,184);
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+
+input::placeholder {
+    color: rgb(207, 207, 207);
+}
+
+.form-pri-btn {
+    color: rgb(244,244,244);
+    background-color: rgb(21,148,148);
+    font-weight: bold;
+    width: 100%;
+    border-radius: 0.5rem;
+
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.form-pri-btn:hover {
+    background-color: rgb(18, 122, 122);
+}
+
+.form-pri-btn:active {
+    outline: 3px solid rgb(28,28,28);
+    outline-offset: 0;
+}
+
+.form-seperator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.form-seperator hr {
+    flex: 1;
+    border: 0;
+    height: 0.1px;
+    background-color:rgb(207, 207, 207);
+}
+
+.form-sep-text {
+    color: rgb(184,184,184);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.form-sec-btn {
+    color : rgb(28,28,28);
+    background-color: white;
+    border: 1px solid rgb(28,28,28);
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.form-sec-btn:hover {
+    background-color: rgb(232, 232, 232);
+    color: rgb(28,28,28);
+}
+
+.form-sec-btn:active {
+    outline: 3px solid rgb(28,28,28);
+    outline-offset: 0;
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.pw-div {
+    position: relative;
+}
+
+.pw-div input {
+    width: 100%;
+}
+
+.toggle-pw {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.agreement {
+    display: flex;
+    align-items: flex-start; 
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.agreement-checkbox {
+    width: auto;
+}
+
+.agreement a {
+    color: rgb(28,28,28);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.agreement a:hover {
+    cursor: pointer;
+    border-bottom: transparent;
+}
+
+.search-bar-alignment {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    background-color: rgb(244,244,244);
+    border: 1px transparent rgb(244,244,244);
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 1.25rem;
+
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgb(184,184,184);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.search-field:first-child {
+    border: none;
+}
+
+.search-field label {
+    font-weight: bold;
+}
+
+.date-picker {
+    width: 100%;
+    height: 60%;
+    background-color: rgb(244,244,244);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
+}
+
+.pickup-location {
+    height: auto;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid rgb(184,184,184);
+    border-radius: 0.5rem;
+}
+
+select {
+    height: 100px;
+}
+
+.user-div {
+    display: flex;
+    margin-left: 3rem;
+    
+}
+
+.user-name {
+    color: rgb(232,232,232);
+    margin-left: 0.5rem;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Select Add Ons</title>
+</head>
+
+<body onload="calculatePriceDetails()">  
+    
+    <header>
+        <nav>
+            <a class="logo-ref" href=index.html><img class="logo" src="../icons/azoom-logo.svg" alt="logo"></a>
+        
+            <div class="header-div"><ul class="header-nav">
+                <li><a href="our-fleet.html">Our Fleet</a></li>
+                <li><a href="how-it-works.html">How it works</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+
+            <div class="user-div">
+                <img src="../icons/profile-circle.svg" alt="profile">
+                <p class="user-name">user1234</p>
+            </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- content here -->
+    <div class="content">
+        <div class="search-result-div">
+            <div class="title-div">
+                <div class="header-group">
+                    <img src="../icons/arrow-head.svg">
+                    <h3 class="header-3">Add Ons</h3>
+                </div>
+                <h4 class="header-4">Enhance your rental experience with our convenient add-ons</h4>
+                <div class="caution-div">
+                    <img src="../icons/caution.svg" alt="note">
+                    <p>Driver must have held their driving license for at least 2 years.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- selection starst here -->
+            <div class="add-on-section">
+                <div class="add-on-options">
+                    <!-- additional driver -->
+                    <div class="option" onclick="changeSelectedDesc(this)" id="addDriverOption">
+                        <div class="option-text">
+                            <div class="option-line">
+                                <img src="../icons/user-add.svg" alt="user-add">
+                                <p>Additional Driver</p>
+                            </div>
+                            <p>$10.50/day</p>
+                        </div>
+                        <div class="toggle-div">
+                            <input class="hide-icon" type="checkbox" id="add-driver" onclick="chkToggledAddOns()">
+                            <label for="add-driver" class="toggle-btn"></label>
+                        </div>
+                    </div>
+                    
+                    <!-- Personal Accident Insurance -->
+                    <div class="option" onclick="changeSelectedDesc(this)" id="pInsuranceOption">
+                        <div class="option-text">
+                            <div class="option-line">
+                                <img src="../icons/personal-insurance.svg" alt="user-add">
+                                <p>Personal Accident Insurance</p>
+                            </div>
+                            <p>$6.25/day</p>
+                        </div>
+                        <div class="toggle-div">
+                            <input class="hide-icon" type="checkbox" id="p-insurance" onclick="chkToggledAddOns()">
+                            <label for="p-insurance" class="toggle-btn"></label>
+                        </div>
+                    </div>
+
+                    <!-- Child Seat -->
+                    <div class="option" onclick="changeSelectedDesc(this)" id="childSeatOption">
+                        <div class="option-text">
+                            <div class="option-line">
+                                <img src="../icons/child-seat.svg" alt="user-add">
+                                <p>Child Seat</p>
+                            </div>
+                            <p>$5.00/day</p>
+                        </div>
+                        <div class="toggle-div">
+                            <input class="hide-icon" type="checkbox" id="child-seat" onclick="chkToggledAddOns()">
+                            <label for="child-seat" class="toggle-btn"></label>
+                        </div>
+                    </div>
+
+                    <!-- return loc -->
+                    <div class="option" onclick="changeSelectedDesc(this)" id="returnOption">
+                        <div class="option-text">
+                            <div class="option-line">
+                                <img src="../icons/location.svg" alt="user-add">
+                                <p>Alternative Return Location</p>
+                            </div>
+                            <p>$30.00</p>
+                        </div>
+                        <div class="option-loc">
+                            <input class="return-loc-text" type="text" id="return-loc-text" placeholder="Enter return location...">
+                            <div class="toggle-div"> 
+                                <input class="hide-icon" type="checkbox" id="return-loc" onclick="chkToggledAddOns()">
+                                <label for="return-loc" class="toggle-btn"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="add-on-desc">
+                    <p class="title" id="add-on-title"></p>
+                    <p id="add-on-desc"></p>
+                </div>
+            </div>
+        
+
+    </div> <!-- end content--> 
+
+    <!-- pop up showing total price -->
+    <div class="total-price-popup"> 
+        <div class="total-price-div">
+            <div class="total-price">
+                <p class="total">Total: </p>
+                <p class="price" id="price"></p>
+            </div>
+            <p class="price-details" onclick="displayPriceDetails()">Price details</p>
+        </div>
+        <button class="primary-btn" onclick="insertBtn() ,displayPriceDetails()">Continue</button>
+    </div>
+
+    <!-- price details pop up -->
+    <div id="price-details" class="popup">
+        <div class="popup-content" id="popup-content">
+            <!-- close button -->
+            <div class="popup-header">
+                <h1 class="popup-title">Price Details</h1>
+                <span id="closePriceDetails" class="close" onclick="closePriceDetails()">&times;</span>  
+            </div>
+            
+            <div class="pd-title">
+                <p >Rental charges (</p> <p id="numDays"></p> <p>&nbsp;days)</p>
+            </div>
+
+            <div class="price-details-line">
+                <div class="price-details-line-name">
+                    <p>Rental:&nbsp;</p><p id="priceDay"></p><p>/day</p>
+                </div>
+                <p id="amtRental"></p>
+            </div>
+
+            <div class="price-details-line">
+                <div class="price-details-line-name">
+                    <p id="pd-cdwName"></p>
+                </div>
+                <p id="pd-cdwAmt">
+            </div>
+
+            <!-- addons section -->
+            <p class="pd-title">Add Ons</p>
+            
+            <div class="price-details-line" id="add-driver-line">
+                <div class="price-details-line-name">
+                    <p id="additional-driver"></p>
+                </div>
+                <p id="amtAddDriver"></p>
+            </div>
+
+            <div class="price-details-line" id="insurance-line">
+                <div class="price-details-line-name">
+                    <p id="personal-insurance"></p>
+                </div>
+                <p id="amtPInsurance"></p>
+            </div>
+
+            <div class="price-details-line" id="childSeatLine">
+                <div class="price-details-line-name">
+                    <p id="child-seat-add-on"></p>
+                </div>
+                <p id="amtChildSeat"></p>
+            </div>
+
+            <div class="price-details-line" id="returnLocLine">
+                <div class="price-details-line-name">
+                    <p id="return-loc-add-on"></p>
+                </div>
+                <p id="amtReturnLoct"></p>
+            </div>
+
+            <!-- total amt -->
+             <div class="price-details-line">
+                <p class="pd-bold">Total(incl. tax)</p>
+                <p class="pd-bold" id="pd-totalAmt"></p>
+             </div>
+        </div>
+    </div>
+
+    <!-- Content ends here -->
+    <footer>
+        <p class="footer-copyright">© 2024 AZoom Car Rental Pte Ltd</p>
+
+        <nav>
+        <div class="footer-div">
+            <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                <li class="seperator">|</li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li class="seperator">|</li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li class="seperator">|</li>
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                <li class="seperator">|</li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="sm-icons">
+            <img class="social-icons" src="../icons/facebook.svg" alt="facebook">
+            <img class="social-icons" src="../icons/instagram.svg" alt="instagram">
+            <img class="social-icons" src="../icons/tiktok.svg" alt="tiktok">
+        </div>
+        </nav>
+    </footer>
+    </div> <!-- closes main-div-->
+
+    <script src="../scripts/booking.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Select CDW</title>
+</head>
+
+<body onload="calculatePriceDetails()">  
+    <header>
+        <nav>
+            <a class="logo-ref" href=index.html><img class="logo" src="../icons/azoom-logo.svg" alt="logo"></a>
+        
+            <div class="header-div"><ul class="header-nav">
+                <li><a href="our-fleet.html">Our Fleet</a></li>
+                <li><a href="how-it-works.html">How it works</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+
+            <div class="user-div">
+                <img src="../icons/profile-circle.svg" alt="profile">
+                <p class="user-name">user1234</p>
+            </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- content here -->
+    <div class="content">
+        <div class="search-result-div">
+            <div class="title-div">
+                <div class="header-group">
+                    <img src="../icons/arrow-head.svg">
+                    <h3 class="header-3">Collision Damage Waiver</h3>
+                </div>
+                <h4 class="header-4">What is it?</h4>
+                <p>Protect yourself from high costs for repairs or replacement of the vehicle, providing you with peace of mind while driving.</p>
+                <div class="caution-div">
+                    <img src="../icons/caution.svg" alt="note">
+                    <p>Driver must have held their driving license for at least 2 years.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cdw-section">
+            <div class="selection-card , active" onclick="changeSelected(this)">
+                <h3 class="header-3">Basic CDW</h3>
+                <p>Offers the minimum required coverage, typically with deductible and some exclusions.</p>
+                <p class="cdw-bold">Deductible: up to $3,500.00</p>
+                <div class="check-line">
+                    <img src="../icons/tick.svg" alt="tick">
+                    <p>Towing fees</p>
+                </div>
+                <div class="check-line">
+                    <img src="../icons/tick.svg" alt="tick">
+                    <p>Includes theft and vandalism protection</p>
+                </div>
+                <div class="cdw-price">
+                    <p>Included</p>
+                </div>
+            </div>
+
+            <div class="selection-card" onclick="changeSelected(this)">
+                <h3 class="header-3">Third-Party Liability</h3>
+                <p>Provides coverage for damages caused to other vehicles or property, as well as reduced deductible to the car itself.</p>
+                <p class="cdw-bold">Deductible: up to $1,750.00</p>
+                <div class="check-line">
+                    <img src="../icons/tick.svg" alt="tick">
+                    <p>Towing fees</p>
+                </div>
+                <div class="check-line">
+                    <img src="../icons/tick.svg" alt="tick">
+                    <p>Includes theft and vandalism protection</p>
+                </div>
+                <div class="check-line">
+                    <img src="../icons/tick.svg" alt="tick">
+                    <p>Includes fire and natural disaster protection</p>
+                </div>
+                <div class="check-line">
+                    <img src="../icons/tick.svg" alt="tick">
+                    <p>Third Party Insurance</p>
+                </div>
+                <div class="cdw-price">
+                    <p>$20.15</p><span>/day</span>
+                </div>
+            </div>
+
+            <div class="selection-card" onclick="changeSelected(this)">
+                <div>
+                    <h3 class="header-3">Comprehensive</h3>
+                    <p>Provides protection against damage to your vehicle from non-collision-related incidents, offering broad coverage for unexpected events.</p>
+                    <p class="cdw-bold">Deductible: up to $1,000.00</p>
+                    <div class="check-line">
+                        <img src="../icons/tick.svg" alt="tick">
+                        <p>Towing fees</p>
+                    </div>
+                    <div class="check-line">
+                        <img src="../icons/tick.svg" alt="tick">
+                        <p>Includes theft and vandalism protection</p>
+                    </div>
+                    <div class="check-line">
+                        <img src="../icons/tick.svg" alt="tick">
+                        <p>Includes fire and natural disaster protection</p>
+                    </div>
+                    <div class="check-line">
+                        <img src="../icons/tick.svg" alt="tick">
+                        <p>Third Party Insurance</p>
+                    </div>
+                    <div class="check-line">
+                        <img src="../icons/tick.svg" alt="tick">
+                        <p>Covers Bodily injuries & legal fees</p>
+                    </div>
+                </div>
+                <div class="cdw-price">
+                    <p>$37.32</p><span>/day</span>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- end content--> 
+
+    <!-- pop up showing total price -->
+    
+    <div class="total-price-popup"> 
+        <div class="total-price-div">
+            <div class="total-price">
+                <p class="total">Total: </p>
+                <p class="price" id="price"></p>
+            </div>
+            <p class="price-details" onclick="displayPriceDetails()">Price details</p>
+        </div>
+        <button class="primary-btn" onclick="addOnPage()">Continue</button>
+    </div>
+
+    <!-- price details pop up -->
+    <div id="price-details" class="popup">
+        <div class="popup-content">
+            <!-- close button -->
+            <div class="popup-header">
+                <h1 class="popup-title">Price Details</h1>
+                <span id="closePriceDetails" class="close" onclick="closePriceDetails()">&times;</span>  
+            </div>
+          
+            <p class="pd-title">Rental charges</p>
+            <div class="price-details-line">
+                <div class="price-details-line-name">
+                    <p id="numDays"></p><p>&nbsp;Rental days x&nbsp;</p><p id="priceDay"></p>
+                </div>
+                <p id="amtRental"></p>
+            </div>
+            <div class="price-details-line">
+                <div class="price-details-line-name">
+                    <p id="pd-cdwName"></p>
+                </div>
+                <p id="pd-cdwAmt"></p>
+            </div>
+
+            <!-- total amt -->
+             <div class="price-details-line">
+                <p class="pd-bold">Total(incl. tax)</p>
+                <p class="pd-bold" id="pd-totalAmt"></p>
+             </div>
+
+        </div>
+    </div>
+
+    <!-- Content ends here -->
+    <footer>
+        <p class="footer-copyright">© 2024 AZoom Car Rental Pte Ltd</p>
+
+        <nav>
+        <div class="footer-div">
+            <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                <li class="seperator">|</li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li class="seperator">|</li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li class="seperator">|</li>
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                <li class="seperator">|</li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="sm-icons">
+            <img class="social-icons" src="../icons/facebook.svg" alt="facebook">
+            <img class="social-icons" src="../icons/instagram.svg" alt="instagram">
+            <img class="social-icons" src="../icons/tiktok.svg" alt="tiktok">
+        </div>
+        </nav>
+    </footer>
+    </div> <!-- closes main-div-->
+
+    <script src="../scripts/booking.js" defer></script>
+</body>
+</html>
